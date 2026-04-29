@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Transitional Archive</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="intro-container" class="layer-intro">
+        <video id="intro-video" autoplay muted playsinline>
+            <source src="retro-static.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="tv-bezel" class="layer-overlay hidden">
+        <img src="tv-frmae-transparent.jpg" alt="Retro TV Frame" class="bezel-image">
+        <div class="scanlines"></div>
+    </div>
+    
+    <div>
+        <h1>My Archives</h1>
+    </div>
+    
+    <main id="main-ui" class="layer-content hidden">
+        <div class="archive-layout">
+
+            <div class="left-pane">
+                <div class="model-container" id="model-wrapper">
+                    <model-viewer 
+                        id="main-viewer"
+                        src="IMac-G3.glb" 
+                        alt="3D Archive Artifact" 
+                        auto-rotate 
+                        camera-controls 
+                        interaction-prompt="none"
+                        shadow-intensity="1"
+                        environment-image="neutral">
+                    </model-viewer>
+                    <model-viewer 
+                        id="main-viewer-2"
+                        src="CNC.glb" 
+                        alt="3D Archive Artifact" 
+                        auto-rotate 
+                        camera-controls 
+                        interaction-prompt="none"
+                        shadow-intensity="1"
+                        environment-image="neutral">
+                    </model-viewer>
+                    <model-viewer 
+                        id="main-viewer-3"
+                        src="German-Radio.glb" 
+                        alt="3D Archive Artifact" 
+                        auto-rotate 
+                        camera-controls 
+                        interaction-prompt="none"
+                        shadow-intensity="1"
+                        environment-image="neutral">
+                    </model-viewer>
+                    <model-viewer 
+                        id="main-viewer-4"
+                        src="TapeRecorder.glb" 
+                        alt="3D Archive Artifact" 
+                        auto-rotate 
+                        camera-controls 
+                        interaction-prompt="none"
+                        shadow-intensity="1"
+                        environment-image="neutral">
+                    </model-viewer>
+
+                </div>
+            </div>
+
+            <div class="right-pane" id="scroll-track">
+                <div>
+                <h1>My Archives</h1>
+            </div>
+                
+                <div class="artifact-section" data-model="German-Radio.glb">
+                    <h2>ARCHIVE_01: German-Radio</h2>
+                    <p>Telefunken was a German radio and television producer, 
+                    founded in Berlin in 1903 as a joint venture between Siemens & Halske and the Allgemeine Elektrizitäts-Gesellschaft.</p>
+                    <p>Prior to World War I, the company set up the first world-wide network of communications and was the first in 
+                        the world to sell electronic televisions with cathode ray tubes, in Germany in 1934.</p>
+                    
+                    <table>
+                        <tr>
+                            <th>Device type</th>
+                            <th>Intermediate frequency</th>
+                            <th>Year of manufacture</th>
+                        </tr>
+                        <tr>
+                            <td>Radio with additional clock and alarm clock, Timer</td>
+                            <td>460 kHz, 10.7 MHz</td>
+                            <td>1988</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <div class="artifact-section" data-model="imac-g3.glb">
+                    <h2>ARCHIVE_02: IMAC G3</h2>
+                    <p>The iMac G3 is an iconic all-in-one Macintosh personal computer sold by Apple from 1998 to 2003.</p>
+                    <p> Designed by Jony Ive, it featured a translucent, colorful, teardrop-shaped case, a 15-inch CRT 
+                        display, and pioneered the widespread adoption of USB while abandoning floppy drives</p>
+                        <table>
+                            <tr>
+                                <th>Design</th>
+                                <th>Processor</th>
+                                <th>Memory-Storage</th>
+                                <th>Graphics</th>
+                            </tr>
+                            <tr>
+                                <td>Translucent, candy-colored, teardrop-shaped plastic case.</td>
+                                <td> 233 MHz PowerPC 750 (G3).</td>
+                                <td>32 MB SDRAM (upgradable), 4GB IDE hard drive.</td>
+                                <td> ATI Rage IIc (2MB VRAM) or Rage Pro Turbo (6MB VRAM).</td>
+                            </tr>
+                        </table>
+                </div>
+
+                <div class="artifact-section" data-model="TapeRecorder.glb">
+                    <h2>ARCHIVE_03: TapeRecorder</h2>
+                    <p>The SLV-ED4 is an entirely standard piece of late stage analog technology. The 
+                        4 head system makes it functionally adequate for basic playback tasks. The Sapphire Tape 
+                        Cleaner provides a marginal layer of physical protection for the heads against standard dust.
+                        It is primarily a marketing term designed to reassure consumers, and it absolutely does not 
+                        replace proper tape maintenance, manual cleaning, or controlled storage.</p>
+                    <table>
+                        <tr>
+                            <th>Head Configuration</th>
+                            <th>System Compatibility</th>
+                            <th>Supplementary Features</th>
+                        </tr>
+                        <tr>
+                            <td>4 rotary heads.</td>
+                            <td>Multi system (can handel typically PAL and NTSC)</td>
+                            <td>Adaptive Picture Control, Trinitron TV Syncroplay, Audio Dubbing, and an Easy Timer recording function.</td>
+                        </tr>
+                    </table>
+                    
+                </div>
+
+                <div class="artifact-section" data-model="CNC.glb">
+                    <h2>ARCHIVE_04: CNC </h2>
+                    <p>The Roland Modela MDX-40 is a compact 4-axis desktop milling machine designed for Subtractive Rapid Prototyping (SRP), featuring a
+                        305x305x105 mm working area.  It is commonly used for, and ideal for high-precision modeling with wax, wood, acrylic, and epoxy resins, 
+                        often used in studios for prototypes and small objects.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>System Type</th>
+                            <th>Performance</th>
+                            <th>Software & Control</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                4-axis desktop CNC (rotary axis optional).
+                            </td>
+                            <td>
+                                Spindle speed of 4,500 to 15,000 rpm with amx resolution of 0.002mm/step.
+                            </td>
+                            <td>
+                                Uses VPanel to control the machine and commonly operates with Modela Player 4 for generating toolpaths from STL files.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="scroll-spacer"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="layer-background"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

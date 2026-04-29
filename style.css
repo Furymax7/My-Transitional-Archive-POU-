@@ -102,8 +102,7 @@ model-viewer {
 }
 
 .artifact-section p {
-    line-height: -6.0;
-    letter-spacing: -1px;
+    line-height: 1.4;
 }
 
 .artifact-section{
