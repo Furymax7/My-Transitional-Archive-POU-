@@ -1,0 +1,111 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #050505; color: #e0e0e0; font-family: 'Courier New', Courier, monospace; overflow: hidden; height: 100vh; width: 100vw; }
+.layer-background { position: absolute; inset: 0; background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%); z-index: 1; }
+.layer-overlay { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+.layer-intro { position: absolute; inset: 0; z-index: 10; display: flex; justify-content: center; align-items: center; background: #000; }
+.hidden { opacity: 0; visibility: hidden; }
+#intro-video { width: 100%; height: 100%; object-fit: cover; }
+.bezel-image { width: 160%; height: 130%; object-fit: fill; }
+.scanlines { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2)); background-size: 100% 4px; opacity: 0.3; }
+
+table, th, td {
+  border:1px solid wheat;
+}
+.bezel-image{
+    margin-left: -10%;
+    margin-top: -3%;
+}
+.layer-content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    padding: 10vh 12vw; 
+}
+
+.archive-layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+}
+
+
+.left-pane {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.model-container {
+    width: 100%;
+    height: 80%;
+    position: relative;
+    transition: opacity 0.4s ease; 
+}
+
+model-viewer {
+    width: 100%;
+    height: 100%;
+    --poster-color: transparent;
+}
+
+
+.right-pane {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding-right: 2rem;
+    pointer-events: auto;
+    
+}
+
+
+.right-pane::-webkit-scrollbar {
+    display: none; 
+}
+.right-pane {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
+.artifact-section {
+    min-height: 60vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.3; 
+    transition: opacity 0.5s ease;
+}
+
+.artifact-section.active {
+    opacity: 1; 
+}
+
+.artifact-section h2 {
+    font-size: 1.5rem;
+    color: #0f0; 
+    margin-bottom: 1rem;
+    text-shadow: 0px 0px 5px rgba(0, 255, 0, 0.4);
+}
+
+.artifact-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.scroll-spacer {
+    height: 50vh; 
+}
+
+.artifact-section p {
+    line-height: -6.0;
+    letter-spacing: -1px;
+}
+
+.artifact-section{
+    margin-top: 10%;
+}
